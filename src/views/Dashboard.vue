@@ -100,7 +100,7 @@
         </v-row>
       </v-container>
     </v-content>
-    <v-btn bottom color="green" dark fab fixed right @click="dialog = !dialog">
+    <v-btn bottom color="pink" dark fab fixed right @click="dialog = !dialog">
       <v-icon>mdi-plus</v-icon>
     </v-btn>
     <v-dialog v-model="dialog" width="800px">
@@ -117,19 +117,19 @@
               </v-row>
             </v-col>
             <v-col cols="6">
-              <v-text-field prepend-icon="mdi-domain" placeholder="Company" />
+              <v-text-field prepend-icon="business" placeholder="Company" />
             </v-col>
             <v-col cols="6">
               <v-text-field placeholder="Job title" />
             </v-col>
             <v-col cols="12">
-              <v-text-field prepend-icon="mdi-email" placeholder="Email" />
+              <v-text-field prepend-icon="mail" placeholder="Email" />
             </v-col>
             <v-col cols="12">
-              <v-text-field type="tel" prepend-icon="mdi-phone" placeholder="(000) 000 - 0000" />
+              <v-text-field type="tel" prepend-icon="phone" placeholder="(000) 000 - 0000" />
             </v-col>
             <v-col cols="12">
-              <v-text-field prepend-icon="mdi-text" placeholder="Notes" />
+              <v-text-field prepend-icon="notes" placeholder="Notes" />
             </v-col>
           </v-row>
         </v-container>
