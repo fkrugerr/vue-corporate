@@ -10,7 +10,7 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'max-len': ['error', 100, 2, {
+    'max-len': ['error', 80, 2, {
       ignoreUrls: true,
       ignoreComments: false,
       ignoreRegExpLiterals: true,
@@ -27,7 +27,7 @@ module.exports = {
         },
         ImportDeclaration: {
           multiline: true,
-          minProperties: 3,
+          minProperties: 6,
         },
         ExportDeclaration: {
           multiline: true,
