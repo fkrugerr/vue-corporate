@@ -114,7 +114,7 @@ export default {
   },
   data: () => ({
     dialog: false,
-    isDrawer: false,
+    isDrawer: null,
   }),
   watch: {
     isAuthorized(next, prev) {

@@ -7,7 +7,7 @@ import {
   clear as removeLocalStorageData,
   get as getStorageKey,
 } from '../localStorage';
-import { getUserData } from '../../helpers/user';
+import { getUserData, getPermissions } from '../../helpers/user';
 
 const { mapActions, mapGetters } = createNamespacedHelpers('auth');
 
@@ -40,13 +40,15 @@ export default {
       state.errorMessage = message;
     },
     setUser(state, userData) {
+      const { userId, email, profile, permissions } = userData;
       state.isAuthenticated = true;
-      state.userId = userData.userId;
+      state.userId = userId;
       state.data = {
-        email: userData.email,
-        profile: userData.profile,
+        email,
+        profile,
       };
-      state.permissions = userData.permissions;
+      state.permissions = permissions.length
+        ? getPermissions(permissions) : [];
       state.errorMessage = null;
     },
     removeUser(state) {
