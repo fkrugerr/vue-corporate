@@ -1,28 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 import store from '../store';
+import routes from './routes';
 
 Vue.use(VueRouter);
-
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: Home,
-    meta: {
-      requiresAuth: true,
-    },
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
-    meta: {
-      guest: true,
-    },
-  },
-];
 
 const router = new VueRouter({
   mode: 'history',

@@ -31,7 +31,7 @@ const staticPermissions = [
     _id: '993',
     name: 'Corporations',
     path: {
-      web: 'corporates',
+      web: 'corporations',
     },
   },
 ];
