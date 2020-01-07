@@ -19,6 +19,7 @@ export default {
   },
   getters: {
     corporations: state => state.data,
+    isLoading: state => state.loading,
   },
   mutations: {
     setError(state, message) {
@@ -27,15 +28,20 @@ export default {
     setCorporations(state, data) {
       state.data = data;
     },
+    setLoading(state, val) {
+      state.loading = val;
+    },
   },
   actions: {
     async fetchCorporations({ commit }) {
+      commit('setLoading', true);
       const res = await restApi('admin/corporations');
       if (res.error) {
         commit('setError', prop('message', res));
       } else {
         commit('setCorporations', res);
       }
+      commit('setLoading', false);
     },
   },
 };
