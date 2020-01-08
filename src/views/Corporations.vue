@@ -66,7 +66,7 @@ export default {
   computed: {
     ...mapGetters(['corporations', 'isLoading']),
     formTitle() {
-      return this.corporationId ? 'Edit Corporation' : 'Create Corporation';
+      return `${this.corporationId ? 'Edit' : 'Create'} Corporation`;
     },
   },
   methods: {

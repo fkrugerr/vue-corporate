@@ -43,7 +43,7 @@
                 </v-col>
                 <v-col cols="4">
                   <v-btn text color="primary" @click="generateCode"
-                    >Generate</v-btn
+                    >Generate Code</v-btn
                   >
                 </v-col>
               </v-row>
